@@ -178,6 +178,8 @@ return [
         // Laravel Collective
         Collective\Html\HtmlServiceProvider::class,
 
+        // Spatie Laravel Permission
+        Spatie\Permission\PermissionServiceProvider::class,
     ],
 
     /*
