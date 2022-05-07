@@ -11,5 +11,14 @@
 
 
 <div class="form-group">
-    <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">
+    @if($formMode === 'create')
+        <button class="btn btn-success" type="submit"><i class="fa fa-check" aria-hidden="true"></i> Crear
+        </button>
+        <a href="{{ route('admin.roles.index') }}" class="btn btn-secondary"><i class="fa fa-ban"
+                                                                                aria-hidden="true"></i> Cancelar</a>
+    @else
+        <button class="btn btn-success" type="submit"><i class="fa fa-check" aria-hidden="true"></i> Actualizar</button>
+        <a href="{{ route('admin.roles.index') }}" class="btn btn-secondary"><i class="fa fa-ban"
+                                                                                aria-hidden="true"></i> Cancelar</a>
+    @endif
 </div>
